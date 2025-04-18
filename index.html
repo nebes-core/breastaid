@@ -235,12 +235,12 @@
         .about-img-container img {
             width: 48%; /* Width of each image relative to container */
             height: 300px; /* Fixed height */
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 0; /* Remove rounded corners */
+            box-shadow: none; /* Remove shadow */
             object-fit: cover; /* This makes the image cover the entire box */
             object-position: center; /* Centers the image within its box */
         }
-        
+
         /* Features Section */
         .features {
             padding: 60px 0;
@@ -370,11 +370,14 @@
             background-color: white;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            justify-items: center; /* Center grid items */
+            .services-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+            justify-content: center;
+            overflow-x: auto; /* In case the cards don't fit on smaller screens */
+            padding: 20px 0;
         }
 
         .service-card {
@@ -385,7 +388,31 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
-            max-width: 350px; /* Limit width for better alignment */
+            flex: 1;
+            min-width: 240px; /* Minimum width to ensure readability */
+            max-width: 300px; /* Maximum width to maintain consistency */
+        }
+
+        /* Add this class for the SVG icon container */
+        .service-icon {
+            height: 60px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon img {
+            height: 50px; /* or whatever height you prefer */
+            width: auto; /* maintain aspect ratio */
+            /* optional: add these if you want some effects */
+            filter: brightness(1); /* normal brightness */
+            transition: filter 0.3s ease;
+        }
+
+        /* optional: add hover effect */
+        .service-card:hover .service-icon img {
+            filter: brightness(1.1); /* slightly brighter on hover */
         }
 
         .service-card::before {
@@ -433,51 +460,120 @@
             margin-bottom: 20px;
         }
 
-        /* Testimonials Section */
-        .testimonials {
+        /* Science Section (replacing Testimonials) */
+        .science {
             padding: 100px 0;
             background-color: #EAEAEA;
+            position: relative;
         }
 
-        .testimonials-slider {
-            max-width: 700px;
-            margin: 0 auto;
+        .science::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .metrics-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .metric-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-value {
+            font-size: 42px;
+            font-weight: 700;
+            color: #F281E2;
+            margin-bottom: 10px;
+        }
+
+        .metric-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1E1E1E;
+            margin-bottom: 8px;
+        }
+
+        .metric-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .chart-title {
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .metrics-container {
+                gap: 15px;
+            }
+            
+            .metric-card {
+                width: calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .metric-card {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        /* Graph Section */
+        .graph-container {
+            max-width: 600px;
+            margin: 40px auto 0;
             text-align: center;
         }
 
-        .testimonial {
-            background-color: white;
+        .graph-image {
+            margin-top: 20px;
             border-radius: 10px;
-            padding: 40px;
-            position: relative;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            filter: invert(100%);
         }
 
-        .testimonial::before {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 80px;
-            color: rgba(242, 129, 226, 0.2);
-            font-family: serif;
-            line-height: 1;
+        .graph-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
         }
 
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
+        .chart-title {
             font-size: 18px;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: #1E1E1E;
-        }
-
-        .testimonial-position {
-            font-size: 14px;
-            color: #F281E2;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 20px;
         }
 
         /* Portfolio Section */
@@ -941,46 +1037,79 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Comprehensive solutions tailored to your unique business needs</p>
+                <h2>Инновационное решение</h2>
+                <p>Как искусственный интеллект трансформирует диагностику</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Web Design & Development</h3>
-                    <p>Custom websites that look stunning and perform flawlessly across all devices, built with the latest technologies and best practices.</p>
-                    <a href="#contact" class="btn">Learn More</a>
+                    <div class="service-icon">
+                        <img src="section4/target.png" alt="Service Icon">
+                    </div>
+                    <h3>Точность</h3>
+                    <p>Стандартизированный анализ с использованием ИИ минимизирует человеческий фактор и обеспечивает объективность результатов.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Brand Identity</h3>
-                    <p>Comprehensive branding solutions including logo design, visual identity systems, brand guidelines, and marketing collateral.</p>
-                    <a href="#contact" class="btn">Learn More</a>
+                    <div class="service-icon">
+                        <img src="section4/lightining.png" alt="Service Icon">
+                    </div>
+                    <h3>Скорость</h3>
+                    <p>Мгновенная обработка данных позволяет значительно ускорить процесс диагностики.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Digital Marketing</h3>
-                    <p>Result-driven marketing strategies including SEO, content marketing, social media, email campaigns, and paid advertising.</p>
-                    <a href="#contact" class="btn">Learn More</a>
+                    <div class="service-icon">
+                        <img src="section4/graph.png" alt="Service Icon">
+                    </div>
+                    <h3>Эффективность</h3>
+                    <p>Высокая чувствительность алгоритмов позволяет выявлять заболевание на ранних стадиях.</p>
                 </div>
                 <div class="service-card">
-                    <h3>UI/UX Design</h3>
-                    <p>User-centered design approach that creates intuitive, engaging, and accessible digital experiences that users love.</p>
-                    <a href="#contact" class="btn">Learn More</a>
+                    <div class="service-icon">
+                        <img src="section4/globe.png" alt="Service Icon">
+                    </div>
+                    <h3>Доступность</h3>
+                    <p>Возможность удаленной диагностики делает технологию доступной в любой точке мира.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+   <!-- Science Section (replacing Testimonials) -->
+    <section id="science" class="science">
         <div class="container">
             <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What our clients say about working with us</p>
+                <h2>Научные показатели</h2>
+                <p>Результаты точности и эффективности нашего алгоритма</p>
             </div>
-            <div class="testimonials-slider">
-                <div class="testimonial">
-                    <p class="testimonial-text">Working with Elegant Solutions was a game-changer for our business. Their team took the time to understand our unique challenges and created a website that not only looks beautiful but also drives real results. We've seen a 40% increase in leads since the launch.</p>
-                    <div class="testimonial-author">Emily Johnson</div>
-                    <div class="testimonial-position">CEO, TechStart Inc.</div>
+            <div class="metrics-container">
+                <div class="metric-card">
+                    <div class="metric-value">90%</div>
+                    <div class="metric-title">Точность</div>
+                    <div class="metric-description">Общая точность выявления заболеваний</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">87%</div>
+                    <div class="metric-title">Чувствительность</div>
+                    <div class="metric-description">Точность выявления положительных случаев</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">91%</div>
+                    <div class="metric-title">Специфичность</div>
+                    <div class="metric-description">Точность выявления отрицательных случаев</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">0.891</div>
+                    <div class="metric-title">AUC-ROC</div>
+                    <div class="metric-description">Площадь под ROC-кривой</div>
+                </div>
+            </div>
+            
+            <div class="graph-container">
+                <div class="chart-title">График Чувствительности Модели</div>
+                <div class="graph-image">
+                    <img src="section5/image 10.png" alt="График ROC-кривой">
                 </div>
             </div>
         </div>
