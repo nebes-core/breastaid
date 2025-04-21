@@ -565,6 +565,7 @@
         .graph-image img {
             width: 100%;
             height: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             border-radius: 5px;
             display: block;
         }
@@ -668,7 +669,75 @@
             color: #F281E2;
             font-size: 14px;
         }
-
+        .implementation-stages {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .stage-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stage-card {
+            flex: 1;
+            min-width: 280px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stage-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stage-number {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 48px;
+            font-weight: 700;
+            color: #F281E2;
+            opacity: 0.5;
+            line-height: 1;
+        }
+        
+        .stage-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .stage-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .stage-row {
+                flex-direction: column;
+            }
+            
+            .stage-card {
+                width: 100%;
+            }
+        }
         /* Contact Section */
         .contact {
             padding: 100px 0;
@@ -1115,60 +1184,105 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-title">
-                <h2>Our Portfolio</h2>
-                <p>Some of our favorite projects we've worked on</p>
+                <h2>Этапы реализации</h2>
+                <p>Как мы достигаем наших целей</p>
             </div>
-            <div class="portfolio-filter">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">Web Design</button>
-                <button class="filter-btn">Branding</button>
-                <button class="filter-btn">UI/UX</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Modern E-commerce Platform</h3>
-                        <div class="portfolio-category">Web Design</div>
+            
+            <div class="implementation-stages">
+                <div class="stage-row">
+                    <!-- Stage 1 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Сбор данных</h3>
+                            <div class="stage-number">1</div>
+                            <p>Сбор и аннотирование большого объема данных для обучения модели.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage 2 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Разработка модели</h3>
+                            <div class="stage-number">2</div>
+                            <p>Создание и обучение модели ИИ на основе собранных данных.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage 3 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Тестирование</h3>
+                            <div class="stage-number">3</div>
+                            <p>Проведение тестирования модели на новых данных для оценки ее точности.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Luxury Brand Identity</h3>
-                        <div class="portfolio-category">Branding</div>
+                
+                <div class="stage-row">
+                    <!-- Stage 4 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Оптимизация</h3>
+                            <div class="stage-number">4</div>
+                            <p>Оптимизация модели для повышения ее производительности и точности.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage 5 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Интеграция</h3>
+                            <div class="stage-number">5</div>
+                            <p>Интеграция модели в существующие медицинские системы.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage 6 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Обучение персонала</h3>
+                            <div class="stage-number">6</div>
+                            <p>Обучение медицинского персонала работе с новой системой.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Health App Interface</h3>
-                        <div class="portfolio-category">UI/UX</div>
+                
+                <div class="stage-row">
+                    <!-- Stage 7 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Пилотное внедрение</h3>
+                            <div class="stage-number">7</div>
+                            <p>Пилотное внедрение системы в нескольких клиниках для сбора отзывов.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Real Estate Platform</h3>
-                        <div class="portfolio-category">Web Design</div>
+                    
+                    <!-- Stage 8 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Анализ отзывов</h3>
+                            <div class="stage-number">8</div>
+                            <p>Анализ отзывов и внесение необходимых изменений в систему.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Financial Dashboard</h3>
-                        <div class="portfolio-category">UI/UX</div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Organic Food Branding</h3>
-                        <div class="portfolio-category">Branding</div>
+                    
+                    <!-- Stage 9 -->
+                    <div class="stage-card">
+                        <div class="stage-content">
+                            <h3>Масштабирование</h3>
+                            <div class="stage-number">9</div>
+                            <p>Масштабирование системы для использования в большем количестве клиник.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
+<!-- Contact Form -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
