@@ -29,7 +29,7 @@
 
         /* Header */
         header {
-            background-color: rgba(234, 234, 234, 0.9);
+            background-color: #EAEAEA;
             backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
@@ -297,7 +297,7 @@
         }
 
         .feature-card {
-            background-color: white;
+            background-color: #FBFBFB;
             border-radius: 15px;
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -367,7 +367,7 @@
         /* Services Section */
         .services {
             padding: 100px 0;
-            background-color: white;
+            background-color: #EAEAEA;
         }
 
             .services-grid {
@@ -381,7 +381,7 @@
         }
 
         .service-card {
-            background-color: #EAEAEA;
+            background-color: #FBFBFB;
             border-radius: 10px;
             padding: 30px;
             text-align: center;
@@ -474,7 +474,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background-color: #ccc;
+            background-color: #FBFBFB;
         }
 
         .metrics-container {
@@ -489,7 +489,7 @@
         }
 
         .metric-card {
-            background-color: white;
+            background-color: #EAEAEA;
             border-radius: 10px;
             padding: 20px;
             width: 220px;
@@ -580,7 +580,7 @@
         /* Portfolio Section */
         .portfolio {
             padding: 100px 0;
-            background-color: white;
+            background-color: #EAEAEA;
         }
 
         .portfolio-filter {
@@ -738,183 +738,233 @@
                 width: 100%;
             }
         }
-        /* Contact Section */
+        /* Contact Section - Redesigned */
         .contact {
-            padding: 100px 0;
+            padding: 80px 0;
             background-color: #EAEAEA;
             position: relative;
         }
 
-        .contact::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(45deg, rgba(242, 129, 226, 0.05) 0%, rgba(234, 234, 234, 0.8) 100%);
-            z-index: 0;
-        }
-
-        .contact-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .contact-info {
+        .section-title {
             text-align: center;
-            max-width: 600px;
+            margin-bottom: 50px;
         }
 
-        .contact-form {
-            width: 100%;
-            max-width: 600px;
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-            text-align: center; /* Center text in form inputs */
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: #F281E2;
-        }
-
-        textarea.form-control {
-            height: 150px;
-            resize: vertical;
-        }
-
-        .info-item {
-            display: flex;
-            flex-direction: column; /* Stack icon and text vertically */
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .info-icon {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(242, 129, 226, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .section-title h2 {
+            color: #F281E2;
+            font-size: 36px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
             margin-bottom: 15px;
         }
 
-        .info-icon i {
-            color: #F281E2;
-            font-size: 20px;
-        }
-
-        .info-text h4 {
-            margin-bottom: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            margin-top: 30px;
-            justify-content: center; /* Center social icons */
-            gap: 15px;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            background-color: #F281E2;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            transform: translateY(-5px);
-            background-color: #1E1E1E;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1E1E1E;
-            color: #EAEAEA;
-            padding: 60px 0 20px;
-            text-align: center; /* Center footer content */
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-            max-width: 300px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .footer-logo {
-            color: #EAEAEA;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .footer-logo span {
-            color: #F281E2;
-        }
-
-        .footer-links h4 {
-            color: #F281E2;
-            margin-bottom: 20px;
-            font-size: 18px;
-            position: relative;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-
-        .footer-links h4::after {
+        .section-title h2::after {
             content: "";
             position: absolute;
-            width: 40px;
-            height: 2px;
+            width: 60px;
+            height: 3px;
             background-color: #F281E2;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
         }
 
-        .footer-links ul {
-            list-style: none;
+        .section-title p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Contact Info Row */
+        .contact-info-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            background-color: #FBFBFB;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-item {
+            flex: 1;
+            min-width: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(242, 129, 226, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .info-item:hover .info-icon {
+            background-color: rgba(242, 129, 226, 0.2);
+        }
+
+        .info-icon i {
+            font-size: 24px;
+            color: #F281E2;
+        }
+
+        .info-text h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .info-text p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Contact Form Container */
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FBFBFB;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            width: 100%;
+        }
+
+        .form-group.half {
+            width: 50%;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            background-color: #FBFBFB;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #F281E2;
+            box-shadow: 0 0 0 2px rgba(242, 129, 226, 0.2);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background-color: #F281E2;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #F281E2;
+        }
+
+        .submit-btn:hover {
+            background-color: transparent;
+            color: #F281E2;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #1E1E1E;
+            color: #EAEAEA;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo, .footer-links, .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        .footer-logo h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .footer-logo span {
+            color: #F281E2;
+        }
+
+        .footer-logo p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #AAAAAA;
+        }
+
+        .footer-links h4, .footer-social h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after, .footer-social h4::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: #F281E2;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
         }
 
         .footer-links ul li {
@@ -922,7 +972,7 @@
         }
 
         .footer-links ul li a {
-            color: #EAEAEA;
+            color: #AAAAAA;
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -931,58 +981,87 @@
             color: #F281E2;
         }
 
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(234, 234, 234, 0.1);
-            font-size: 14px;
+        .social-icons {
+            display: flex;
+            gap: 15px;
         }
 
-        /* Responsive */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(242, 129, 226, 0.1);
+            border-radius: 50%;
+            color: #F281E2;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #F281E2;
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: #AAAAAA;
+        }
+
+        /* Responsive Adjustments */
         @media (max-width: 992px) {
-            .contact-content {
-                flex-direction: column;
+            .contact-info-row {
+                flex-wrap: wrap;
             }
             
-            .about-content {
+            .info-item {
+                flex-basis: 50%;
+                margin-bottom: 20px;
+            }
+            
+            .form-row {
                 flex-direction: column;
+                gap: 15px;
+            }
+            
+            .form-group.half {
+                width: 100%;
             }
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
+            .info-item {
+                flex-basis: 100%;
             }
             
-            .header-content {
+            .footer-content {
                 flex-direction: column;
                 text-align: center;
             }
             
-            nav ul {
-                margin-top: 20px;
-                flex-wrap: wrap;
+            .footer-links h4::after, .footer-social h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .social-icons {
                 justify-content: center;
             }
-            
-            nav ul li {
-                margin: 5px 10px;
-            }
-            
-            .section-title h2 {
-                font-size: 30px;
-            }
-            
-            .about-img-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .about-img-container img {
-                width: 80%;
-                margin-bottom: 20px;
-            }
-        }
+        }                   
+
+        .invisible-word {
+        color: #1E1E1E; /* Matches the body background color */
+        text-align: center; /* Centers the word horizontally */
+        padding: 10px 0; /* Adds a little vertical spacing */
+        font-size: 12px; /* Adjust font size as needed */
+    }
+
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -995,16 +1074,20 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">BreastAId<span>.uz</span></div>
+                <div class="logo">
+                    <a href="#home">
+                        <img src="Breast.png" alt="BreastAId.uz Logo">
+                    </a>
+                </div>
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home">О технологии</a></li>
+                        <li><a href="#about">Показатели</a></li>
+                        <li><a href="#features">Проблематика</a></li>
+                        <li><a href="#services">Решение</a></li>
+                        <li><a href="#science">Научные показатели</a></li> 
+                        <li><a href="#portfolio">Реализация</a></li>
+                        <li><a href="#contact">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -1282,68 +1365,117 @@
         </div>
     </section>
     
-<!-- Contact Form -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Let's discuss how we can help your business grow</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p>ab.ochilov05@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Phone</h4>
-                            <p>+998 88 10 000 01</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Location</h4>
-                            <p>100011 Республика Узбекистан, город Ташкент, Улица Муминов 7/1</p>
-                        </div>
-                    </div>
-    
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
+<!-- Contact Section Redesigned -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Свяжитесь с нами</h2>
+            <p>Обсудим, как мы можем помочь вам</p>
+        </div>
+        
+        <!-- Contact Info Row -->
+        <div class="contact-info-row">
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </div>
-                    </form>
+                <div class="info-text">
+                    <h4>Email</h4>
+                    <p>ab.ochilov05@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info-text">
+                    <h4>Телефон</h4>
+                    <p>+998 88 10 000 01</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-text">
+                    <h4>Адрес</h4>
+                    <p>100011 Республика Узбекистан, город Ташкент, Улица Муминов 7/1</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-text">
+                    <h4>Время работы</h4>
+                    <p>Пн-Пт: 9:00 - 18:00</p>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Contact Form Row -->
+        <div class="contact-form-container">
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group half">
+                        <input type="text" class="form-control" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group half">
+                        <input type="email" class="form-control" placeholder="Ваш Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Тема сообщения">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="Ваше сообщение" required></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="submit-btn">Отправить сообщение</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>BreastAId<span>.uz</span></h3>
+                <p>Революция в диагностике рака молочной железы с использованием искусственного интеллекта</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Быстрые ссылки</h4>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#features">Преимущества</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Следите за нами</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 BreastAId.uz. Все права защищены.</p>
+        </div>
+        <div class="invisible-word">
+            Made by Abdullo Ochilov
+        </div>
+    </div>
+</footer>
